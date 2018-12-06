@@ -52,7 +52,7 @@ npm i react-local-currency --save
   />
 ```
 
-To see a full example, look at [the demo](https://react-local-currency.unichat.io)
+To see a full example, look at the [demo](https://react-local-currency.unichat.io) and the [source](https://github.com/unichat-io/react-local-currency/tree/master/demo/src) 👩🏻‍💻 👨🏻‍💻
 
 ## Authors
 

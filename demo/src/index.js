@@ -25,8 +25,8 @@ class ReactLocalCurrencyDemo extends React.Component {
             <LocalCurrency
               amount={7}
               base='USD'
-              IPDATA_API_KEY='test'
-              OXR_API_ID='d4d79a5ac00a4cc093175e542155049d'
+              IPDATA_API_KEY={process.env.REACT_IPDATA_API_KEY}
+              OXR_API_ID={process.env.REACT_APP_OXR_API_ID}
               render={({ data, loading, error }) => {
                 if (error) return `Error! ${error.message}`
 

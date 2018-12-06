@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "name": "react-local-currency-demo",
+  "alias": [
+    "react-local-currency"
+  ],
+  "type": "static",
+  "static": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
