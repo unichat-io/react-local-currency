@@ -3,6 +3,10 @@
 
 [![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coveralls][codecov-badge]][codecov]
 
+<p align="center">
+  <img width="350" height="350" src="https://github.com/unichat-io/react-local-currency/blob/master/media/react-local-currency.png?raw=true" alt="Logo"/>
+</p>
+
 
 ## Installation
 
@@ -53,6 +57,10 @@ npm i react-local-currency --save
 ```
 
 To see a full example, look at the [demo](https://react-local-currency.unichat.io) and the [source](https://github.com/unichat-io/react-local-currency/tree/master/demo/src) 👩🏻‍💻 👨🏻‍💻
+
+## Credits
+
+Thanks to [Nadia Ilustraciones](http://nadiailustraciones.com) for donating the logo!
 
 ## Authors
 
