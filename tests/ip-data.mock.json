@@ -1,0 +1,18 @@
+{
+  "currency": {
+    "name": "Argentine Peso",
+    "code": "ARS",
+    "symbol": "AR$",
+    "native": "$",
+    "plural": "Argentine pesos"
+  },
+  "threat": {
+    "is_tor": false,
+    "is_proxy": false,
+    "is_anonymous": false,
+    "is_known_attacker": false,
+    "is_known_abuser": false,
+    "is_threat": false,
+    "is_bogon": false
+  }
+}
