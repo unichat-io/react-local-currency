@@ -1,7 +1,7 @@
 {
   "name": "react-local-currency",
   "version": "1.0.0",
-  "description": "react-local-currency React component",
+  "description": "Shows the price of your services in the customer's currency. 💶 💷 💵 💴",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -19,19 +19,36 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "money": "github:ducdigital/money.js",
+    "url-join": "^4.0.0"
+  },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "fetch-mock": "^7.2.5",
     "nwb": "0.23.x",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.1"
   },
-  "author": "",
+  "author": "Sebastián Lorenzo <SebastianLorenzo@gmail.com>",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/unichat-io/react-local-currency",
   "keywords": [
     "react-component"
   ]
