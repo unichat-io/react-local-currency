@@ -1,7 +1,8 @@
 
 # React Local Currency
 
-[![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coveralls][coveralls-badge]][coveralls]
+[![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coveralls][codecov-badge]][codecov]
+
 
 ## Installation
 
@@ -65,11 +66,11 @@ To see a full example, look at [the demo](https://react-local-currency.unichat.i
 
 MIT license. Copyright © 2018.
 
-[build-badge]: https://img.shields.io/travis/unichat-io/react-local-currency/master.png?style=flat-square
+[build-badge]: https://travis-ci.org/unichat-io/react-local-currency.svg?branch=master
 [build]: https://travis-ci.org/unichat-io/react-local-currency
 
-[npm-badge]: https://img.shields.io/npm/v/react-local-currency.png?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-local-currency.svg
 [npm]: https://www.npmjs.org/package/react-local-currency
 
-[coveralls-badge]: https://img.shields.io/coveralls/unichat-io/react-local-currency/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/unichat-io/react-local-currency
+[codecov-badge]: https://codecov.io/gh/unichat-io/react-local-currency/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/unichat-io/react-local-currency
