@@ -30,7 +30,7 @@ npm i react-local-currency --save
    <LocalCurrency
       amount={7}
       base='USD'
-      IPDATA_API_KEY={process.env.REACT_IPDATA_API_KEY} // Get the api key from http://ipdata.co
+      IPDATA_API_KEY={process.env.REACT_APP_IPDATA_API_KEY} // Get the api key from http://ipdata.co
       OXR_API_ID={process.env.REACT_APP_OXR_API_ID} // Get the api id from https://openexchangerates.org
       render={({ data, loading, error }) => {
         if (error) return `Error! ${error.message}`
