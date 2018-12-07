@@ -47,6 +47,19 @@ describe('React Local Currency', () => {
     expect(wrapper.length).toBe(1)
   })
 
+  it('It renders breaking - Wrong initialize ', () => {
+    const wrapper = shallow(
+      <ReactLocalCurrency
+        amount={7}
+        base='USD'
+        IPDATA_API_KEY='test'
+        OXR_API_ID='test'
+      />
+    )
+
+    expect(wrapper.isEmptyRender()).toBe(true)
+  })
+
   it('Initialize sets initial state', async () => {
     const wrapper = shallow(
       <ReactLocalCurrency
