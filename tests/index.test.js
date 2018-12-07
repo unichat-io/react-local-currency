@@ -18,7 +18,7 @@ describe('React Local Currency', () => {
     fetchMock.mock('https://api.ipdata.co/?api-key=test', require('./ip-data.mock.json'))
   })
 
-  it('It renders without breaking', () => {
+  it('It renders without breaking using render as property', () => {
     const wrapper = shallow(
       <ReactLocalCurrency
         amount={7}
@@ -27,6 +27,21 @@ describe('React Local Currency', () => {
         OXR_API_ID='test'
         render={noop}
       />
+    )
+
+    expect(wrapper.length).toBe(1)
+  })
+
+  it('It renders without breaking using render as children elements', () => {
+    const wrapper = shallow(
+      <ReactLocalCurrency
+        amount={7}
+        base='USD'
+        IPDATA_API_KEY='test'
+        OXR_API_ID='test'
+      >
+        {() => <div />}
+      </ReactLocalCurrency>
     )
 
     expect(wrapper.length).toBe(1)
