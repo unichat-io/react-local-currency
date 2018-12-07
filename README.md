@@ -23,37 +23,40 @@ npm i react-local-currency --save
 ## Usage
 
 ```js
+  import * as React from 'react'
   import LocalCurrency from 'react-local-currency'
 
-  ...
+  const ReactLocalCurrency = () => (
+   <LocalCurrency
+      amount={7}
+      base='USD'
+      IPDATA_API_KEY={process.env.REACT_IPDATA_API_KEY} // Get the api key from http://ipdata.co
+      OXR_API_ID={process.env.REACT_APP_OXR_API_ID} // Get the api id from https://openexchangerates.org
+      render={({ data, loading, error }) => {
+        if (error) return `Error! ${error.message}`
 
-  <LocalCurrency
-    amount={7} // Default price
-    base='USD' // Default currency
-    IPDATA_API_KEY='?' // Get the api key from http://ipdata.co
-    OXR_API_ID='?' // Get the api id from https://openexchangerates.org
-    render={({ data, loading, error }) => {
-      if (error) return `Error! ${error.message}`
+        if (loading) return 'Loading ...'
 
-      if (loading) return 'Loading ...'
+        if (!data) return null
 
-      if (!data) return null
+        return (
+          <div>
+            <h3>
+              My service price: <strong>7 USD.</strong>
+            </h3>
+            <h3>
+              My currency based on my IP: <strong>{`${data.currency}`}</strong>
+            </h3>
+            <h3>
+              My local price is: <strong>{`${data.amount} ${data.currency}`}</strong>
+            </h3>
+          </div>
+        )
+      }}
+    />
+  )
 
-      return (
-        <div>
-          <h3>
-            My service price: <strong>7 USD.</strong>
-          </h3>
-          <h3>
-            My currency based on my IP: <strong>{`${data.currency}`}</strong>
-          </h3>
-          <h3>
-            My local price is: <strong>{`${data.amount} ${data.currency}`}</strong>
-          </h3>
-        </div>
-      )
-    }}
-  />
+  export default ReactLocalCurrency
 ```
 
 To see a full example, look at the [demo](https://react-local-currency.unichat.io) and the [source](https://github.com/unichat-io/react-local-currency/tree/master/demo/src) 👩🏻‍💻 👨🏻‍💻
