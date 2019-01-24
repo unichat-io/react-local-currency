@@ -50,6 +50,11 @@
   "license": "MIT",
   "repository": "https://github.com/unichat-io/react-local-currency",
   "keywords": [
-    "react-component"
+    "react-component",
+    "currency",
+    "currencies",
+    "money",
+    "exchange",
+    "convert"
   ]
 }
