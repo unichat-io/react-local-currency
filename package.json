@@ -1,23 +1,24 @@
 {
   "name": "react-local-currency",
-  "version": "1.0.0",
-  "description": "Shows the price of your services in the customer's currency. 💶 💷 💵 💴",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "version": "1.1.0",
+  "description": "💶 💷 Shows the price of your services in the customer's currency 💵 💴",
+  "main": "dist/react-local-currency.js",
+  "umd:main": "dist/react-local-currency.umd.js",
+  "module": "dist/react-local-currency.m.js",
+  "source": "src/index.js",
   "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
+    "dist/",
+    "README.md"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "example": "parcel ./demo/index.html --out-dir example",
+    "build": "microbundle -o dist/ --sourcemap false --compress false --external url-join urlJoin",
+    "dev": "microbundle watch -o dist/ --sourcemap false --compress false --external url-join urlJoin",
+    "eslint": "eslint ./src && eslint ./demo",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "snapshots": "jest -u",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "money": "github:ducdigital/money.js",
@@ -26,24 +27,45 @@
   "peerDependencies": {
     "react": "16.x"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/demo/",
+      "/example/",
+      "/dist/",
+      "/media/"
+    ],
+    "automock": false,
+    "verbose": true,
+    "testRegex": "\\.test\\.js$",
+    "testURL": "http://localhost/"
+  },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "eslint": "^5.9.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "eslint": "^5.12.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "fetch-mock": "^7.2.5",
-    "nwb": "0.23.x",
+    "fetch-mock": "^7.3.0",
+    "jest": "^24.0.0",
+    "microbundle": "^0.9.0",
+    "parcel-bundler": "^1.11.0",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "styled-components": "^4.1.2"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
   },
   "author": "Sebastián Lorenzo <SebastianLorenzo@gmail.com>",
   "homepage": "",
