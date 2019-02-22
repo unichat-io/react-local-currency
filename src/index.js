@@ -7,7 +7,7 @@ import ipdata from './api/ip-data'
 import conversor from './utils/conversor'
 import { checkHttpStatus, parseJSON } from './utils/request'
 
-class LocalCurrency extends React.Component {
+class LocalCurrency extends React.PureComponent {
   static displayName = 'LocalCurrency'
 
   static propTypes = {
